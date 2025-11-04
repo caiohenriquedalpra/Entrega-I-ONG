@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Social - Entrega I</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2c5282',
+                        'secondary': '#f6ad55',
+                        'accent': '#68d391',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col font-sans">
+    <header class="bg-primary text-white shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold tracking-tight">ONG Projeto Futuro</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" onclick="showPage('home')" class="text-lg hover:text-secondary transition duration-300 p-2 rounded-lg">Início</a></li>
+                    <li><a href="#projetos" onclick="showPage('projetos')" class="text-lg hover:text-secondary transition duration-300 p-2 rounded-lg">Projetos Sociais</a></li>
+                    <li><a href="#cadastro" onclick="showPage('cadastro')" class="text-lg hover:text-secondary transition duration-300 p-2 rounded-lg bg-secondary text-primary font-semibold">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <section id="home" class="page-content space-y-8 p-6 bg-white shadow-2xl rounded-xl">
+            <h2>Bem-vindo à ONG Projeto Futuro</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Nossa organização é dedicada a transformar comunidades através de educação, capacitação profissional e apoio social direto. Acreditamos que um futuro melhor é construído com oportunidades iguais para todos.
+            </p>
+
+            <article class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-primary">Nossa Missão</h3>
+                    <!-- TEXTO MAIS LONGO E INTERESSANTE -->
+                    <p class="text-gray-600">Nossa missão é inabalável: erradicar o ciclo de desigualdade fornecendo acesso irrestrito à educação de qualidade, capacitação profissional moderna e apoio psicossocial contínuo. Empoderamos jovens e adultos em situação de vulnerabilidade para que descubram seu potencial máximo, transformando-os em líderes autônomos e agentes catalisadores de progresso dentro de suas famílias e comunidades. Investimos na autonomia e dignidade de cada indivíduo.</p>
+                </div>
+
+                <figure class="rounded-xl overflow-hidden shadow-2xl">
+                    <img src="https://placehold.co/600x400/2c5282/ffffff?text=CRIAN%C3%87AS" alt="Crianças sorrindo em um projeto social, representando o trabalho da organização." class="w-full h-auto object-cover transition duration-500 ease-in-out transform hover:scale-105" loading="lazy">
+                    <figcaption class="text-sm text-gray-500 p-2 text-center">Impacto de nossas ações nas novas gerações.</figcaption>
+                </figure>
+            </article>
+
+            <section class="p-6 bg-gray-100 rounded-lg shadow-inner space-y-4">
+                <h3 class="text-2xl font-semibold text-primary">Informações de Contato</h3>
+                <p class="text-gray-700">Entre em contato conosco para saber mais sobre como você pode ajudar ou se beneficiar de nossos programas.</p>
+                <address class="not-italic space-y-1 text-gray-600">
+                    <p><strong class="font-medium">Endereço:</strong> Rua da Esperança, 123 - Bairro Solidário, Cidade Luz, Brasil.</p>
+                    <p><strong class="font-medium">Telefone:</strong> <a href="tel:+5511999998888" class="text-primary hover:text-secondary">(11) 99999-8888</a></p>
+                    <p><strong class="font-medium">Email:</strong> <a href="mailto:contato@projetofuturo.org" class="text-primary hover:text-secondary">contato@projetofuturo.org</a></p>
+                </address>
+            </section>
+        </section>
+
+        <section id="projetos" class="page-content hidden space-y-8 p-6 bg-white shadow-2xl rounded-xl">
+            <h2>Nossos Projetos e Como Ajudar</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">Conheça as iniciativas que transformam a vida de milhares de pessoas e descubra maneiras simples de fazer parte dessa mudança.</p>
+
+            <article class="grid md:grid-cols-3 gap-6">
+                <section class="p-6 border border-gray-200 rounded-lg shadow-md space-y-3">
+                    <h3 class="text-xl font-semibold text-accent">Programa de Voluntariado</h3>
+                    <p class="text-gray-600">Dedique seu tempo e talento. Nossos voluntários são a força vital da ONG, atuando em diversas áreas: tutoria, oficinas de arte e organização de eventos.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-500 mt-2">
+                        <li>Reuniões de Orientação Mensais</li>
+                        <li>Flexibilidade de Horários</li>
+                        <li>Certificado de Participação</li>
+                    </ul>
+                    <a href="#cadastro" onclick="showPage('cadastro')" class="inline-block mt-4 text-sm font-medium text-white bg-primary py-2 px-4 rounded-lg hover:bg-secondary transition">Inscreva-se Aqui</a>
+                </section>
+                
+                <section class="p-6 border border-gray-200 rounded-lg shadow-md space-y-3">
+                    <h3 class="text-xl font-semibold text-accent">Campanha de Doação de Fundos</h3>
+                    <p class="text-gray-600">Sua contribuição financeira é vital. Ela é usada para a compra de materiais, manutenção da sede e expansão de novos projetos em áreas carentes.</p>
+                    <p class="text-sm font-medium text-gray-800">Doações podem ser feitas via PIX ou Boleto Bancário.</p>
+                    <button class="w-full mt-4 text-sm font-medium text-primary border border-primary py-2 px-4 rounded-lg hover:bg-primary hover:text-white transition">Detalhes para Doação</button>
+                </section>
+
+                <figure class="rounded-xl overflow-hidden shadow-2xl">
+                    <img src="https://placehold.co/600x400/68d391/2c5282?text=VOLUNTARIADO" alt="Mãos unidas em um círculo, simbolizando a união e o voluntariado." class="w-full h-auto object-cover transition duration-500 ease-in-out transform hover:scale-105" loading="lazy">
+                    <figcaption class="text-sm text-gray-500 p-2 text-center">Unidos pela causa: O poder do trabalho voluntário.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section id="cadastro" class="page-content hidden space-y-8 p-6 bg-white shadow-2xl rounded-xl">
+            <h2>Faça Parte da Nossa Comunidade</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">Preencha o formulário abaixo para se voluntariar, registrar interesse ou receber nossas newsletters.</p>
+
+            <div id="messageBox" class="hidden"></div>
+            
+            <form id="cadastroForm" class="space-y-6" novalidate>
+                
+                <fieldset class="border border-gray-300 p-6 rounded-lg shadow-sm">
+                    <legend class="text-xl font-semibold text-primary px-2">Dados Pessoais</legend>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        
+                        <div class="flex flex-col">
+                            <label for="nome" class="text-sm font-medium text-gray-700">Nome Completo <span class="text-red-500">*</span></label>
+                            <input type="text" id="nome" name="nome" required minlength="5" maxlength="100" class="form-input" placeholder="Seu nome completo">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label for="email" class="text-sm font-medium text-gray-700">E-mail <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required class="form-input" placeholder="exemplo@dominio.com">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label for="cpf" class="text-sm font-medium text-gray-700">CPF <span class="text-red-500">*</span></label>
+                            <input type="text" id="cpf" name="cpf" required 
+                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                                title="Formato exigido: 000.000.000-00" 
+                                maxlength="14" class="form-input" placeholder="000.000.000-00">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label for="telefone" class="text-sm font-medium text-gray-700">Telefone <span class="text-red-500">*</span></label>
+                            <input type="tel" id="telefone" name="telefone" required 
+                                pattern="\(\d{2}\) \d{4,5}-\d{4}" 
+                                title="Formato exigido: (XX) XXXX-XXXX ou (XX) XXXXX-XXXX" 
+                                maxlength="15" class="form-input" placeholder="(99) 99999-9999">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label for="nascimento" class="text-sm font-medium text-gray-700">Data de Nascimento <span class="text-red-500">*</span></label>
+                            <input type="date" id="nascimento" name="nascimento" required class="form-input">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="border border-gray-300 p-6 rounded-lg shadow-sm">
+                    <legend class="text-xl font-semibold text-primary px-2">Endereço</legend>
+                    
+                    <div class="grid md:grid-cols-3 gap-4 mt-4">
+                        <div class="flex flex-col md:col-span-3">
+                            <label for="endereco" class="text-sm font-medium text-gray-700">Endereço (Rua, Número e Complemento) <span class="text-red-500">*</span></label>
+                            <input type="text" id="endereco" name="endereco" required class="form-input" placeholder="Rua, número e complemento">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label for="cep" class="text-sm font-medium text-gray-700">CEP <span class="text-red-500">*</span></label>
+                            <input type="text" id="cep" name="cep" required 
+                                pattern="\d{5}-\d{3}" 
+                                title="Formato exigido: 00000-000" 
+                                maxlength="9" class="form-input" placeholder="00000-000">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label for="cidade" class="text-sm font-medium text-gray-700">Cidade <span class="text-red-500">*</span></label>
+                            <input type="text" id="cidade" name="cidade" required class="form-input" placeholder="Nome da cidade">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label for="estado" class="text-sm font-medium text-gray-700">Estado <span class="text-red-500">*</span></label>
+                            <select id="estado" name="estado" required class="form-input appearance-none">
+                                <option value="" disabled selected>Selecione o Estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="PR">Paraná</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <div class="flex justify-center">
+                    <button type="submit" class="w-full md:w-auto bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-secondary hover:text-primary transition duration-300 transform hover:scale-105">
+                        Enviar Cadastro
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary text-white py-6 mt-12 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 ONG Projeto Futuro. Todos os direitos reservados. | Desenvolvido para a Entrega I - Fundamentos e Estruturação.</p>
+        </div>
+    </footer>
+
+    <script src="js/masks.js"></script>
+</body>
+</html>
